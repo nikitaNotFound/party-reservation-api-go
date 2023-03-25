@@ -1,0 +1,27 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API for party tickets reservation",
+        "title": "Party Reservation API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "paths": {
+        "/registration": {
+            "post": {
+                "description": "process incoming data to register use to the party",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "registration"
+                ],
+                "summary": "Registration to the party",
+                "responses": {}
+            }
+        }
+    }
+}

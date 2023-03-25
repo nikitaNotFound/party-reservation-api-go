@@ -12,7 +12,5 @@ type handler struct {
 func RegisterRoutes(r *gin.Engine, db *gorm.DB) {
 	h := handler{Db: db}
 
-	routes := r.Group("/registration")
-
-	routes.POST("/registration", h.RegisterHandler)
+	r.POST("/registration", h.RegisterHandler)
 }

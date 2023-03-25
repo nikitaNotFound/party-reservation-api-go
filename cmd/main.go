@@ -8,6 +8,7 @@ import (
 	_ "go-api/v2/cmd/docs"
 	"go-api/v2/pkg/controllers/registration"
 	"go-api/v2/pkg/db"
+	"net/http"
 )
 
 // @title           Party Reservation API
@@ -26,6 +27,10 @@ func main() {
 	registration.RegisterRoutes(r, database)
 
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	r.GET("/", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "/engine/swagger/index.html")
+		c.Abort()
+	})
 
 	r.Run(port)
 }

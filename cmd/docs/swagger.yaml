@@ -1,0 +1,18 @@
+info:
+  contact: {}
+  description: API for party tickets reservation
+  title: Party Reservation API
+  version: "1.0"
+paths:
+  /registration:
+    post:
+      consumes:
+      - application/json
+      description: process incoming data to register use to the party
+      produces:
+      - application/json
+      responses: {}
+      summary: Registration to the party
+      tags:
+      - registration
+swagger: "2.0"

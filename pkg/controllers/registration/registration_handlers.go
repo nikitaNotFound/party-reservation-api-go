@@ -1,4 +1,4 @@
-﻿package registration
+package registration
 
 import (
 	"github.com/gin-gonic/gin"
@@ -13,6 +13,14 @@ type RegisterRequest struct {
 	RegistrationType models.RegistrationType `json:"registrationType"`
 }
 
+// RegisterHandler godoc
+// @Summary Registration to the party
+// @Schemes
+// @Description process incoming data to register use to the party
+// @Tags registration
+// @Accept json
+// @Produce json
+// @Router /registration [post]
 func (h handler) RegisterHandler(c *gin.Context) {
 	body := RegisterRequest{}
 

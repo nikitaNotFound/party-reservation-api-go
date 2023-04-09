@@ -1,9 +1,10 @@
 package registration
 
 import (
-	"github.com/gin-gonic/gin"
-	"go-api/v2/pkg/models"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
+	"github.com/nikitaNotFound/party-reservation-api-go/users-service/pkg/models"
 )
 
 type RegisterRequest struct {

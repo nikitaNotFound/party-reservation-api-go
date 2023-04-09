@@ -1,10 +1,11 @@
 package main
 
 import (
-	_ "go-api/v2/cmd/docs"
-	"go-api/v2/pkg/controllers/registration"
-	"go-api/v2/pkg/db"
 	"net/http"
+
+	_ "github.com/nikitaNotFound/party-reservation-api-go/users-service/cmd/docs"
+	"github.com/nikitaNotFound/party-reservation-api-go/users-service/pkg/controllers/registration"
+	"github.com/nikitaNotFound/party-reservation-api-go/users-service/pkg/db"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"

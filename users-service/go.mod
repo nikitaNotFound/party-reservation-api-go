@@ -1,4 +1,4 @@
-module go-api/v2
+module github.com/nikitaNotFound/party-reservation-api-go/users-service
 
 go 1.19
 

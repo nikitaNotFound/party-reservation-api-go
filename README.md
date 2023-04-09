@@ -6,6 +6,7 @@ This is a Golang-based API for managing party reservations. The API is designed 
 
 - Register using phone number
 - Phone confirmation
+- Registration to the parties
 - Email notifications for new parties
 - Email notifications for party information changes and messages organizers
 - Recommendations based on user participation history

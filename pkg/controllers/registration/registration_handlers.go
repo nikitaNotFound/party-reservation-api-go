@@ -16,7 +16,7 @@ type RegisterRequest struct {
 // RegisterHandler godoc
 // @Summary Registration to the party
 // @Schemes
-// @Description process incoming data to register use to the party
+// @Description process incoming data to register use to the party. Sends email or sms with reservation code
 // @Tags registration
 // @Accept json
 // @Produce json

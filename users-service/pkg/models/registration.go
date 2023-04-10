@@ -1,19 +1,7 @@
 package models
 
-import "gorm.io/gorm"
-
 type Registration struct {
-	gorm.Model
-	FirstName        string           `json:"firstName"`
-	LastName         string           `json:"lastName"`
-	Age              int              `json:"age"`
-	RegistrationType RegistrationType `json:"registrationType "`
+	ID      uint `gorm:"primary_key" json:"id"`
+	UserID  uint `gorm:"not null" json:"user_id"`
+	PartyID uint `gorm:"not null" json:"party_id"`
 }
-
-type RegistrationType string
-
-const (
-	Standard RegistrationType = "Standard"
-	Premium                   = "Premium"
-	Royal                     = "Royal"
-)

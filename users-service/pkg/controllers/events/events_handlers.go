@@ -1,4 +1,4 @@
-package registration
+package events
 
 import (
 	"net/http"
@@ -8,10 +8,8 @@ import (
 )
 
 type RegisterRequest struct {
-	FirstName        string                  `json:"firstName"`
-	LastName         string                  `json:"lastName"`
-	Age              int                     `json:"age"`
-	RegistrationType models.RegistrationType `json:"registrationType"`
+	FirstName string `json:"firstName"`
+	LastName  string `json:"lastName"`
 }
 
 // RegisterHandler godoc
@@ -23,18 +21,17 @@ type RegisterRequest struct {
 // @Produce json
 // @Router /registration [post]
 func (h handler) RegisterHandler(c *gin.Context) {
-	body := RegisterRequest{}
+	request := RegisterRequest{}
 
-	if err := c.BindJSON(&body); err != nil {
+	if err := c.BindJSON(&request); err != nil {
 		c.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
 
 	registration := models.Registration{
-		FirstName:        body.FirstName,
-		LastName:         body.LastName,
-		Age:              body.Age,
-		RegistrationType: body.RegistrationType,
+		ID:      0,
+		UserID:  0,
+		PartyID: 0,
 	}
 
 	if result := h.Db.Create(&registration); result.Error != nil {

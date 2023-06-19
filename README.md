@@ -8,8 +8,10 @@ This is a Golang-based API for managing party reservations. The API is designed 
 - Phone confirmation
 - Registration to the parties for registered users
 - Anonymous registration to the parties
-- Email notifications for new parties
-- Email notifications for party information changes and messages organizers
+- Email and application notifications for new parties
+- Email and application notifications for party information changes and messages from organizers
+- Ability for organizers to have draft parties to edit them and save results to publish later.
+- Ability to send messages for all participants of the party.
 - Recommendations based on user participation history
 - Comments and ratings for parties and their organizers
 
@@ -17,7 +19,9 @@ This is a Golang-based API for managing party reservations. The API is designed 
 
 - Golang as a language
 - PostgreSQL as a database
-- Two microservices (one for users, another one for organizers)
+- Users microservice
+- Organizers microservice
+- Notifications microservice
 - Kafka as a Message Broker for services communication
 - K8s as a container orchestrator
 - Azure as a cloud platform
@@ -27,8 +31,10 @@ This is a Golang-based API for managing party reservations. The API is designed 
 
 ## Develop roadmap
 
-- [ ] Database Design: 
+- [x] Database Design for users and organizers service: 
 <br />Design the database schema and create the necessary tables to store user, party, and organizer information. Use PostgreSQL as the database.
+- [ ] Database Design for notifications service: 
+<br />Design the database schema and create the necessary tables to store notifications. Use PostgreSQL as the database.
 - [x] User and Organizer Microservices:
 <br />Create two separate microservices - one for users and one for organizers. Each microservice should have its own API endpoint and should be responsible for handling user and organizer-related requests.
 - [ ] Phone Verification:
